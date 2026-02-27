@@ -36,6 +36,7 @@ A Node.js Express server for generating and printing product barcode labels. Thi
 ## Usage
 
 Start the server:
+
 ```bash
 npm start
 ```
@@ -45,6 +46,7 @@ npm start
 **POST /** - Print product barcode
 
 **Request Body:**
+
 ```json
 {
   "id": "6971536926468",
@@ -55,6 +57,7 @@ npm start
 ```
 
 **Parameters:**
+
 - `id` (required): Product ID/barcode number
 - `price` (required): Product price
 - `name` (required): Product name
@@ -69,28 +72,3 @@ npm start
    - Price at the bottom
 3. **Caching**: Generated barcodes are saved to `barcodes/` directory for future use
 4. **Printing**: The `unix-print` library sends the image to the thermal printer
-
-## File Structure
-
-```
-printerServer/
-├── controller.js       # Main request handler and printing logic
-├── helper.js          # Barcode generation utilities
-├── barcodes/          # Generated barcode images (auto-generated)
-├── .env.example       # Environment variable template
-├── package.json       # Dependencies and scripts
-└── .gitignore        # Git ignore rules
-```
-
-## Dependencies
-
-- **express**: Web server framework
-- **jsbarcode**: Barcode generation library
-- **canvas**: Node.js canvas implementation for image creation
-- **unix-print**: Cross-platform printing utility
-- **cors**: Cross-origin resource sharing middleware
-- **dotenv**: Environment variable management
-
-## License
-
-ISC
