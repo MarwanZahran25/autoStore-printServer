@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Generated barcode images
+barcodes/*.jpeg
+barcodes/*.jpg
+barcodes/*.png
+
+# macOS system files
+.DS_Store
+
+# Environment variables
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
